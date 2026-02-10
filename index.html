@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Surface Anomalies Monitoring</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        /* 顶部大图区域 */
+        header {
+            /* 下面这个链接是一张地球卫星的通用图，稍后我会教你换成你自己的 */
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 60vh; /* 占据屏幕高度的60% */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        /* 给图片加一层黑色遮罩，让白色文字更清晰 */
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        /* 标题文字样式 */
+        .header-content {
+            position: relative;
+            z-index: 1; /* 保证文字在遮罩上面 */
+            color: white;
+            padding: 0 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        p.subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        /* 下方内容区域 */
+        .container {
+            max-width: 900px;
+            margin: -50px auto 50px; /* 让内容卡片往上浮动一点 */
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 2;
+        }
+        h2 {
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        /* 算法列表样式 */
+        .algorithm-list {
+            list-style: none;
+            padding: 0;
+        }
+        .algorithm-list li {
+            background: #f8f9fa;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-left: 5px solid #007bff; /* 左侧蓝条 */
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+        .algorithm-list li:hover {
+            transform: translateX(10px); /* 鼠标悬停时轻微移动 */
+            background: #e9ecef;
+        }
+        .algo-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .algo-desc {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Immediate remote sensing</h1>
+            <p class="subtitle">for sudden Earth surface anomalies</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Existing Algorithms (已有算法)</h2>
+        
+        <ul class="algorithm-list">
+            <li>
+                <span class="algo-name">Algorithm A: Multi-source Data Fusion</span>
+                <span class="algo-desc">Integrating optical and SAR data for rapid anomaly detection.</span>
+            </li>
+            
+            <li>
+                <span class="algo-name">Algorithm B: Deep Learning Change Detection</span>
+                <span class="algo-desc">Using CNNs to identify sudden surface changes in real-time.</span>
+            </li>
+            
+            <li>
+                <span class="algo-name">Algorithm C: Spectral Anomaly Analysis</span>
+                <span class="algo-desc">Hyperspectral signature matching for specific mineral alterations.</span>
+            </li>
+
+            </ul>
+    </div>
+
+</body>
+</html>
